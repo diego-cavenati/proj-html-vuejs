@@ -36,7 +36,9 @@ export default {
 @use '../../assets/scss/partials/variables.scss' as *;
 
 nav {
-    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-image: linear-gradient(to bottom, #ffffff, #ffffff00, );
 }
 
 img.logo {
@@ -57,6 +59,8 @@ ul.navbar {
 
         a {
             color: $el-darker;
+            font-family: $el-font-sans;
+
 
             &:hover {
                 color: $el-primary;

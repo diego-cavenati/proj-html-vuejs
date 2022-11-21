@@ -3,7 +3,7 @@
 // colors
 @use './partials/variables.scss' as *;
 // Font
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Khojki:wght@400;500;600;700&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Khojki:wght@400;500;600;700&family=Open+Sans&family=Poppins:wght@300;400&display=swap');
 
 // Common rules
 * {
@@ -18,6 +18,40 @@ img {
 
 a {
     text-decoration: none;
+}
+
+// Button 
+button {
+    border: none;
+    padding: 0.4rem;
+    text-transform: uppercase;
+    display: flex;
+}
+
+.buttonPrimary {
+    background-color: $el-primary;
+    color: $el-lighter;
+
+    img {
+        color: $el-lighter;
+
+    }
+}
+
+.buttonSecondary {
+    background-color: $el-lighter;
+    color: $el-darker;
+    font-family: $el-font-sans;
+
+    img {
+        color: $el-darker;
+
+    }
+}
+
+// Utility
+.primaryColor {
+    color: $el-primary;
 }
 
 // Container page

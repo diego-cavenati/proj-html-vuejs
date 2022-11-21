@@ -7,15 +7,15 @@ export default {
             intervalId: null,
             slides: [
                 {
-                    image: '../../assets/img/rev-slider-main-home-img-01.jpg',
+                    image: 'rev-slider-main-home-img-01.jpg',
                     title: 'Our Team.',
                     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus porro, iste dicta delectus eum cumque odit dolorem aperiam vero! Doloribus minus aut at delectus ea et aliquid aperiam eos ipsa!',
                 }, {
-                    image: '../../assets/img/rev-slider-main-home-img-02.jpg',
+                    image: 'rev-slider-main-home-img-02.png',
                     title: 'Our Team.',
                     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus porro, iste dicta delectus eum cumque odit dolorem aperiam vero! Doloribus minus aut at delectus ea et aliquid aperiam eos ipsa!',
                 }, {
-                    image: '../../assets/img/rev-slider-main-home-img-03.jpg',
+                    image: 'rev-slider-main-home-img-03.jpg',
                     title: 'Our Team.',
                     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus porro, iste dicta delectus eum cumque odit dolorem aperiam vero! Doloribus minus aut at delectus ea et aliquid aperiam eos ipsa!',
                 },
@@ -46,6 +46,9 @@ export default {
         },
         stopAutoPlay() {
             clearInterval(this.intervalId)
+        },
+        getImageUrl(name) {
+            return new URL(`../../assets/img/${name}`, import.meta.url).href
         }
     },
 }
@@ -67,16 +70,23 @@ export default {
             <div class="item" :class="activeImage === i ? 'visible' : ''" v-for="(element, i) in slides"
                 @mouseenter="stopAutoPlay()" @mouseleave="startAutoPlay()">
 
-                <!-- <img :src="element.image" alt=""> -->
-                <img src="../../assets/img/rev-slider-main-home-img-03.jpg" alt="">
+                <img :src="getImageUrl(element.image)" alt="">
+                <!-- <img :src="`/src/assets/img/${element.image}`" alt=""> -->
 
                 <div class="elContainerMid">
-                    <div class="col-6 text">
-                        <h3>{{ element.title }}</h3>
+                    <div class="col-6 claim">
+                        <h2>{{ element.title }}</h2>
                         <p>{{ element.text }}</p>
-                        <button>Read more</button>
-                        <button>Purchase</button>
-
+                        <div class="action">
+                            <button class="buttonSecondary">
+                                Read more
+                                <img src="../../assets/svg/svg-6.svg" alt="">
+                            </button>
+                            <button class="buttonPrimary">
+                                Purchase
+                                <img src="../../assets/svg/svg-6.svg" alt="">
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -117,12 +127,23 @@ export default {
     object-fit: cover;
 }
 
-.item .text {
+.item .claim {
     position: absolute;
     left: 0;
     bottom: 50px;
     text-align: left;
     color: $el-darker;
+    font-size: 0.8rem;
+    font-family: $el-font-sans;
+    font-weight: 300;
+}
+
+.claim {
+    h2 {
+        font-family: $el-font-serif;
+        font-size: 4rem;
+        font-weight: 700;
+    }
 }
 
 .elContainerMid,
@@ -133,13 +154,25 @@ export default {
 .prev,
 .next {
     position: absolute;
-    top: 50%;
-    transform: translate(-50%);
+    top: 234.5px;
     cursor: pointer;
     z-index: 999;
+
+    img {
+        filter: invert(100%);
+    }
+}
+
+.prev {
+    transform: rotate(180deg);
+    left: 0;
 }
 
 .next {
-    bottom: 0;
+    right: 0;
+}
+
+.action {
+    display: flex;
 }
 </style>

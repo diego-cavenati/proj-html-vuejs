@@ -13,13 +13,22 @@ export default {
 <template>
 
     <!-- navbar -->
-    <NavBar />
+    <NavBar class="navBar" />
 
     <!-- jumbotron -->
-    <JumbotronSection />
+    <JumbotronSection class="jumbotron" />
 
 </template>
 
 <style lang="scss" scoped>
 @use '../assets/scss/partials/variables' as *;
+
+.navBar {
+    z-index: 999;
+    position: relative;
+}
+
+.jumbotron {
+    margin-top: -4rem;
+}
 </style>
