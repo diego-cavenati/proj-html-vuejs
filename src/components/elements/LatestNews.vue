@@ -6,7 +6,9 @@ export default {
 </script>
 
 <template>
+    <div class="latestNews">
 
+    </div>
 </template>
 
 <style lang="scss" scoped>

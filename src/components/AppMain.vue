@@ -32,7 +32,9 @@ export default {
         <TeamWork />
         <UpcomingEvents />
         <CreativeLeader />
+        <!--ok -->
         <LatestNews />
+        <!--ok -->
         <TestimonialsSection />
         <!--ok -->
         <VideoSection />

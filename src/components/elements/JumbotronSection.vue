@@ -100,14 +100,6 @@ export default {
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/variables.scss' as *;
 
-.square {
-
-    img {
-        max-height: 469px;
-        width: 100%;
-        object-fit: cover;
-    }
-}
 
 .item {
     width: 100%;
