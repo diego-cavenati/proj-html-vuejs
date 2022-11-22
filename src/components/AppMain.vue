@@ -32,9 +32,12 @@ export default {
     <CreativeLeader />
     <LatestNews />
     <TestimonialsSection />
+    <!--ok -->
     <VideoSection />
     <ContactUs />
+    <!--ok -->
     <PartnersSection />
+
 </template>
 
 <style lang="scss" scoped>

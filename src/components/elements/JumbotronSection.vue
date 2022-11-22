@@ -71,7 +71,6 @@ export default {
                 @mouseenter="stopAutoPlay()" @mouseleave="startAutoPlay()">
 
                 <img :src="getImageUrl(element.image)" alt="">
-                <!-- <img :src="`/src/assets/img/${element.image}`" alt=""> -->
 
                 <div class="elContainerMid">
                     <div class="col-6 claim">
