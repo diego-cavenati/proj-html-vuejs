@@ -36,6 +36,7 @@ export default {
         <TestimonialsSection />
         <!--ok -->
         <VideoSection />
+        <!--ok -->
         <ContactUs />
         <!--ok -->
         <PartnersSection />

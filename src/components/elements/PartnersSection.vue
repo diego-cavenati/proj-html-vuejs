@@ -48,7 +48,7 @@ export default {
 @use '../../assets/scss/partials/variables.scss' as *;
 
 .partersSection {
-    padding: 4.75rem 0;
+    padding: 2.75rem 0 4.75rem 0;
 }
 
 img {
