@@ -9,11 +9,11 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faBars, faMagnifyingGlass, faPlay, faUser, faClock } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faMagnifyingGlass, faPlay, faUser, faClock, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 // import { faStar as farStar } from '@fortawesome/free-regular-svg-icons'
 
 /* add icons to the library */
-library.add(faBars, faMagnifyingGlass, faPlay, faUser, faClock)
+library.add(faBars, faMagnifyingGlass, faPlay, faUser, faClock, faLocationDot)
 
 createApp(App)
     .component('font-awesome-icon', FontAwesomeIcon)
