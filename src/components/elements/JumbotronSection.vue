@@ -110,7 +110,6 @@ export default {
 }
 
 .item {
-    float: left;
     width: 100%;
     position: relative;
     display: none;
@@ -131,18 +130,6 @@ export default {
     left: 0;
     bottom: 50px;
     text-align: left;
-    color: $el-darker;
-    font-size: 0.8rem;
-    font-family: $el-font-sans;
-    font-weight: 300;
-}
-
-.claim {
-    h2 {
-        font-family: $el-font-serif;
-        font-size: 4rem;
-        font-weight: 700;
-    }
 }
 
 .elContainerMid,

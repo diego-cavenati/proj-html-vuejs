@@ -26,20 +26,30 @@ export default {
 </script>
 
 <template>
-    <OurSpecialties />
-    <TeamWork />
-    <UpcomingEvents />
-    <CreativeLeader />
-    <LatestNews />
-    <TestimonialsSection />
-    <!--ok -->
-    <VideoSection />
-    <ContactUs />
-    <!--ok -->
-    <PartnersSection />
-
+    <main>
+        <!--ok -->
+        <OurSpecialties class="ourSpecialties" />
+        <TeamWork />
+        <UpcomingEvents />
+        <CreativeLeader />
+        <LatestNews />
+        <TestimonialsSection />
+        <!--ok -->
+        <VideoSection />
+        <ContactUs />
+        <!--ok -->
+        <PartnersSection />
+    </main>
 </template>
 
 <style lang="scss" scoped>
+main {
+    display: flex;
+    flex-direction: column;
+}
 
+.ourSpecialties {
+    margin-top: -2.5rem;
+    z-index: 99999;
+}
 </style>

@@ -12,12 +12,43 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: $el-darker;
+}
+
 img {
     max-width: 100%;
 }
 
 a {
     text-decoration: none;
+}
+
+p {
+    color: $el-darker;
+    font-size: 0.8rem;
+    font-family: $el-font-sans;
+    font-weight: 300;
+}
+
+h2 {
+    font-family: $el-font-serif;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-family: $el-font-serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+hr {
+    width: 2.5rem;
+    color: $el-primary;
+    background: $el-primary;
+    border: 0;
+    height: 1px;
 }
 
 // Button 
@@ -52,6 +83,10 @@ button {
 // Utility
 .primaryColor {
     color: $el-primary;
+}
+
+.center {
+    text-align: center;
 }
 
 // Container page
