@@ -31,6 +31,7 @@ export default {
         <OurSpecialties class="ourSpecialties" />
         <TeamWork />
         <UpcomingEvents />
+        <!--ok -->
         <CreativeLeader />
         <!--ok -->
         <LatestNews />
