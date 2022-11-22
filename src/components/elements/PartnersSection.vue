@@ -47,7 +47,15 @@ export default {
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/variables.scss' as *;
 
-.partnersSection {
-    padding: 4.75rem 0;
+.partersSection {
+    margin: 4.75rem 0;
+}
+
+img {
+    width: 60%;
+
+    &:hover {
+        filter: invert(36%) sepia(28%) saturate(7227%) hue-rotate(353deg) brightness(103%) contrast(101%); // !TODO aggiungo transizione 
+    }
 }
 </style>
