@@ -72,8 +72,7 @@ export default {
                 <img src="../../assets/svg/svg-4.svg" alt="">
             </div>
             <div class="headingNews">
-                <h3>Latest news.</h3>
-                <!--TODO rendere il punto dinamico arancione -->
+                <h3 class="primaryDot">Latest news</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <hr>
             </div>

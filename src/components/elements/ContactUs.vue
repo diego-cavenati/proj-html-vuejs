@@ -14,8 +14,7 @@ export default {
                     <!-- TODO aggiungo pin -->
                 </div>
                 <div class="col-6 form">
-                    <h3>Contact us.</h3>
-                    <!--TODO rendere il punto dinamico arancione -->
+                    <h3 class="primaryDot">Contact us</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <hr>
                     <div class="row">

@@ -1,6 +1,11 @@
 <script>
+import JumbotronButton from './JumbotronButton.vue';
+
 export default {
     name: 'JumbotronSection',
+    components: {
+        JumbotronButton,
+    },
     data() {
         return {
             activeImage: 0,
@@ -8,15 +13,15 @@ export default {
             slides: [
                 {
                     image: 'rev-slider-main-home-img-01.jpg',
-                    title: 'Our Team.',
+                    title: 'Our Team',
                     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus porro, iste dicta delectus eum cumque odit dolorem aperiam vero! Doloribus minus aut at delectus ea et aliquid aperiam eos ipsa!',
                 }, {
                     image: 'rev-slider-main-home-img-02.png',
-                    title: 'Our Team.',
+                    title: 'Lorem',
                     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus porro, iste dicta delectus eum cumque odit dolorem aperiam vero! Doloribus minus aut at delectus ea et aliquid aperiam eos ipsa!',
                 }, {
                     image: 'rev-slider-main-home-img-03.jpg',
-                    title: 'Our Team.',
+                    title: 'Lorem ipsum',
                     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus porro, iste dicta delectus eum cumque odit dolorem aperiam vero! Doloribus minus aut at delectus ea et aliquid aperiam eos ipsa!',
                 },
             ],
@@ -70,22 +75,15 @@ export default {
             <div class="item" :class="activeImage === i ? 'visible' : ''" v-for="(element, i) in slides"
                 @mouseenter="stopAutoPlay()" @mouseleave="startAutoPlay()">
 
-                <img :src="getImageUrl(element.image)" alt="">
+                <img class="imgJumbotron" :src="getImageUrl(element.image)" alt="">
 
                 <div class="elContainerMid">
                     <div class="col-6 claim">
-                        <h2>{{ element.title }}</h2>
+                        <h2 class="primaryDot">{{ element.title }}</h2>
                         <p>{{ element.text }}</p>
-                        <div class="action">
-                            <button class="buttonSecondary">
-                                Read more
-                                <img src="../../assets/svg/svg-6.svg" alt="">
-                            </button>
-                            <button class="buttonPrimary">
-                                Purchase
-                                <img src="../../assets/svg/svg-6.svg" alt="">
-                            </button>
-                        </div>
+
+                        <JumbotronButton />
+
                     </div>
                 </div>
 
@@ -148,9 +146,5 @@ export default {
 
 .next {
     right: 0;
-}
-
-.action {
-    display: flex;
 }
 </style>

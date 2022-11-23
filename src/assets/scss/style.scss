@@ -58,27 +58,8 @@ button {
     padding: 0.4rem;
     text-transform: uppercase;
     display: flex;
-}
-
-.buttonPrimary {
-    background-color: $el-primary;
-    color: $el-lighter;
-
-    img {
-        color: $el-lighter;
-
-    }
-}
-
-.buttonSecondary {
-    background-color: $el-lighter;
-    color: $el-darker;
     font-family: $el-font-sans;
-
-    img {
-        color: $el-darker;
-
-    }
+    font-size: 0.8rem;
 }
 
 .buttonFormSubscribe {
@@ -94,6 +75,11 @@ button {
 
 .center {
     text-align: center;
+}
+
+.primaryDot::after {
+    color: $el-primary;
+    content: ".";
 }
 
 // Container page

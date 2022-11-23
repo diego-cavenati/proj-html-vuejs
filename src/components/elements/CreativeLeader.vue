@@ -14,7 +14,7 @@ export default {
         <div class="elContainerMid">
             <div class="row">
                 <div class="col">
-                    <h3>Creative Leader.</h3>
+                    <h3 class="primaryDot">Creative Leader</h3>
                     <!--TODO rendere il punto dinamico arancione -->
                     <hr>
 

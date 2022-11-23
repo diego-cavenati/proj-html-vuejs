@@ -38,7 +38,7 @@ export default {
     <div class="ourSpecialties">
         <div class="elContainerMid">
             <div class="headingSpecialties">
-                <h3>Our specialties.</h3>
+                <h3 class="primaryDot">Our specialties</h3>
                 <!--TODO rendere il punto dinamico arancione -->
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <hr>
