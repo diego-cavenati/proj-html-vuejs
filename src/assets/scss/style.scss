@@ -81,6 +81,12 @@ button {
     }
 }
 
+.buttonFormSubscribe {
+    background: none;
+    color: $el-lighter;
+    font-size: 0.6rem;
+}
+
 // Utility
 .primaryColor {
     color: $el-primary;
