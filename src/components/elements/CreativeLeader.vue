@@ -1,7 +1,11 @@
 <script>
+import AppButton from './AppButton.vue';
 
 export default {
     name: 'CreativeLeader',
+    components: {
+        AppButton,
+    }
 }
 </script>
 
@@ -17,8 +21,7 @@ export default {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugiat nulla magnam adipisci
                         minima, enim quam quibusdam incidunt placeat reiciendis non ea error odio. Pariatur amet harum
                         cum non magni.</p>
-                    <a href="#">read more</a>
-                    <!-- TODO add component -->
+                    <AppButton buttonText="read more" />
                 </div>
                 <div class="col">
                     <div class="mentorship">
@@ -70,13 +73,6 @@ export default {
     }
 }
 
-a {
-    text-transform: uppercase;
-    color: $el-darker;
-    font-family: $el-font-sans;
-    font-size: 0.7rem;
-    font-weight: 500;
-}
 
 .col {
     h6 {

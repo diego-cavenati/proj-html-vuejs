@@ -1,7 +1,11 @@
 <script>
+import AppButton from './AppButton.vue';
 
 export default {
     name: 'UpcomingEvents',
+    components: {
+        AppButton,
+    }
 }
 </script>
 
@@ -29,7 +33,7 @@ export default {
                                     <font-awesome-icon class="primaryColor" icon="fa-solid fa-location-dot" />
                                     Cambridge, MA 02138, USA
                                 </div>
-                                <a href="#">read more</a>
+                                <AppButton buttonText="read more" />
                             </div>
                         </div>
                         <div class="event">
@@ -47,7 +51,7 @@ export default {
                                     <font-awesome-icon class="primaryColor" icon="fa-solid fa-location-dot" />
                                     Cambridge, MA 02138, USA
                                 </div>
-                                <a href="#">read more</a>
+                                <AppButton buttonText="read more" />
                             </div>
                         </div>
                         <div class="event">
@@ -65,7 +69,7 @@ export default {
                                     <font-awesome-icon class="primaryColor" icon="fa-solid fa-location-dot" />
                                     Cambridge, MA 02138, USA
                                 </div>
-                                <a href="#">read more</a>
+                                <AppButton buttonText="read more" />
                             </div>
                         </div>
                     </div>
@@ -136,13 +140,5 @@ export default {
             }
         }
     }
-}
-
-a {
-    text-transform: uppercase;
-    color: $el-darker;
-    font-family: $el-font-sans;
-    font-size: 0.7rem;
-    font-weight: 500;
 }
 </style>

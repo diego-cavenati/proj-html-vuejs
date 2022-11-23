@@ -1,7 +1,11 @@
 <script>
+import AppButton from './AppButton.vue';
 
 export default {
     name: 'LatestNews',
+    components: {
+        AppButton,
+    },
     data() {
         return {
             activeImage: 0,
@@ -104,7 +108,7 @@ export default {
                             <h4>{{ element.title }}</h4>
                             <p>{{ element.text }}</p>
 
-                            <a href="#">read more</a>
+                            <AppButton buttonText="read more" />
                         </div>
 
                     </div>
@@ -164,14 +168,6 @@ export default {
 
     p {
         color: $el-darker;
-    }
-
-    a {
-        text-transform: uppercase;
-        color: $el-darker;
-        font-family: $el-font-sans;
-        font-size: 0.7rem;
-        font-weight: 500;
     }
 }
 
