@@ -1,9 +1,11 @@
 <script>
+import { store } from '../../store.js';
 
 export default {
     name: 'TeamWork',
     data() {
         return {
+            store,
             activeImage: 0,
             intervalId: null,
             slides: [
@@ -26,35 +28,9 @@ export default {
             ],
         }
     },
-    methods: {
-        prevImage() {
-            this.activeImage--
-            if (this.activeImage < 0) {
-                this.activeImage = this.slides.length - 1;
-            }
-        },
-        nextImage() {
-            this.activeImage++
-
-            if (this.activeImage === this.slides.length) {
-                this.activeImage = 0;
-            }
-        },
-        changeImage(index) {
-            this.activeImage = index;
-        },
-        startAutoPlay() {
-            this.intervalId = setInterval(() => {
-                this.nextImage();
-            }, 3000)
-        },
-        stopAutoPlay() {
-            clearInterval(this.intervalId)
-        },
-        getImageUrl(name) {
-            return new URL(`../../assets/img/${name}`, import.meta.url).href
-        }
-    },
+    mounted() {
+        this.store.teamSlides = this.slides.length
+    }
 }
 </script>
 
@@ -62,14 +38,14 @@ export default {
     <div class="teamWork">
         <div class="elContainerMid">
             <img class="elementBg" src="../../assets/svg/svg-4.svg" alt="">
-            <div class="item" :class="activeImage === i ? 'visible' : ''" v-for="(element, i) in slides">
+            <div class="item" :class="store.teamActiveImage === i ? 'visible' : ''" v-for="(element, i) in slides">
                 <div class="imageSlider">
-                    <img :src="getImageUrl(element.image)" alt="">
+                    <img :src="store.getImageUrl(element.image)" alt="">
                     <div class="arrow">
-                        <div class="prev" @click="prevImage">
+                        <div class="prev" @click="store.teamPrevImage()">
                             <img src="../../assets/svg/svg-6.svg" alt="">
                         </div>
-                        <div class="next" @click="nextImage">
+                        <div class="next" @click="store.teamNextImage()">
                             <img src="../../assets/svg/svg-6.svg" alt="">
                         </div>
                     </div>

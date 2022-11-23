@@ -28,7 +28,7 @@ export default {
         }
     },
     mounted() {
-        this.store.slides = this.slides.length
+        this.store.jumboSlides = this.slides.length
     }
 }
 </script>
@@ -38,16 +38,16 @@ export default {
         <div class="slider-wrapper" tabindex="0">
 
             <div class="elContainerFull">
-                <div class="prev" @click="store.prevImage()">
+                <div class="prev" @click="store.jumboPrevImage()">
                     <img src="../../assets/svg/svg-6.svg" alt="">
                 </div>
-                <div class="next" @click="store.nextImage()">
+                <div class="next" @click="store.jumboNextImage()">
                     <img src="../../assets/svg/svg-6.svg" alt="">
                 </div>
             </div>
 
-            <div class="item" :class="store.activeImage === i ? 'visible' : ''" v-for="(element, i) in slides"
-                @mouseenter="stopAutoPlay()" @mouseleave="startAutoPlay()">
+            <div class="item" :class="store.jumboActiveImage === i ? 'visible' : ''" v-for="(element, i) in slides"
+                @mouseenter="jumboStopAutoPlay()" @mouseleave="jumboStartAutoPlay()">
 
                 <img class="imgJumbotron" :src="store.getImageUrl(element.image)" alt="">
 
