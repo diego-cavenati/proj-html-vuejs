@@ -1,4 +1,5 @@
 <script>
+import { store } from '../../store.js';
 import JumbotronButton from './JumbotronButton.vue';
 
 export default {
@@ -8,8 +9,7 @@ export default {
     },
     data() {
         return {
-            activeImage: 0,
-            intervalId: null,
+            store,
             slides: [
                 {
                     image: 'rev-slider-main-home-img-01.jpg',
@@ -21,41 +21,15 @@ export default {
                     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus porro, iste dicta delectus eum cumque odit dolorem aperiam vero! Doloribus minus aut at delectus ea et aliquid aperiam eos ipsa!',
                 }, {
                     image: 'rev-slider-main-home-img-03.jpg',
-                    title: 'Lorem ipsum',
+                    title: 'Ipsum',
                     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus porro, iste dicta delectus eum cumque odit dolorem aperiam vero! Doloribus minus aut at delectus ea et aliquid aperiam eos ipsa!',
                 },
             ],
         }
     },
-    methods: {
-        prevImage() {
-            this.activeImage--
-            if (this.activeImage < 0) {
-                this.activeImage = this.slides.length - 1;
-            }
-        },
-        nextImage() {
-            this.activeImage++
-
-            if (this.activeImage === this.slides.length) {
-                this.activeImage = 0;
-            }
-        },
-        changeImage(index) {
-            this.activeImage = index;
-        },
-        startAutoPlay() {
-            this.intervalId = setInterval(() => {
-                this.nextImage();
-            }, 5000)
-        },
-        stopAutoPlay() {
-            clearInterval(this.intervalId)
-        },
-        getImageUrl(name) {
-            return new URL(`../../assets/img/${name}`, import.meta.url).href
-        }
-    },
+    mounted() {
+        this.store.slides = this.slides.length
+    }
 }
 </script>
 
@@ -64,18 +38,18 @@ export default {
         <div class="slider-wrapper" tabindex="0">
 
             <div class="elContainerFull">
-                <div class="prev" @click="prevImage">
+                <div class="prev" @click="store.prevImage()">
                     <img src="../../assets/svg/svg-6.svg" alt="">
                 </div>
-                <div class="next" @click="nextImage">
+                <div class="next" @click="store.nextImage()">
                     <img src="../../assets/svg/svg-6.svg" alt="">
                 </div>
             </div>
 
-            <div class="item" :class="activeImage === i ? 'visible' : ''" v-for="(element, i) in slides"
+            <div class="item" :class="store.activeImage === i ? 'visible' : ''" v-for="(element, i) in slides"
                 @mouseenter="stopAutoPlay()" @mouseleave="startAutoPlay()">
 
-                <img class="imgJumbotron" :src="getImageUrl(element.image)" alt="">
+                <img class="imgJumbotron" :src="store.getImageUrl(element.image)" alt="">
 
                 <div class="elContainerMid">
                     <div class="col-6 claim">
