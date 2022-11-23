@@ -72,6 +72,10 @@ export default {
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/variables.scss' as *;
 
+.elContainerMid {
+    position: relative;
+}
+
 .personSlider {
     background-color: $el-lighter;
     padding: 3.125rem;
@@ -177,8 +181,8 @@ p {
 // element bg
 .elementBg {
     position: absolute;
-    top: 1rem;
-    right: 0;
+    top: 0.2rem;
+    right: -6rem;
     width: 25%;
 }
 </style>

@@ -27,7 +27,7 @@ export default {
                             <textarea name="message" rows="3" cols="60" placeholder="Write a message"></textarea>
                         </div>
                     </div>
-                    <button class="buttonPrimary">
+                    <button class="buttonFormPrimary">
                         send
                         <img src="../../assets/svg/svg-6.svg" alt="">
                     </button>
@@ -72,5 +72,24 @@ textarea {
 
 button {
     margin-top: 0.5rem;
+}
+
+.buttonFormPrimary {
+    background-color: $el-primary;
+    color: $el-lighter;
+    padding: 0.5rem 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    img {
+        width: 20%;
+    }
+
+    .line {
+        background-color: $el-lighter;
+    }
 }
 </style>

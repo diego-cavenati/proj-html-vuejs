@@ -15,9 +15,7 @@ export default {
             <div class="row">
                 <div class="col">
                     <h3 class="primaryDot">Creative Leader</h3>
-                    <!--TODO rendere il punto dinamico arancione -->
                     <hr>
-
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugiat nulla magnam adipisci
                         minima, enim quam quibusdam incidunt placeat reiciendis non ea error odio. Pariatur amet harum
                         cum non magni.</p>
@@ -64,6 +62,14 @@ export default {
 
 <style lang="scss" scoped>
 @use '../../assets/scss/partials/variables.scss' as *;
+
+hr {
+    margin: 0.6rem 0;
+}
+
+p {
+    padding-bottom: 0.7rem;
+}
 
 .creativeLeader {
     padding: 6rem 0;

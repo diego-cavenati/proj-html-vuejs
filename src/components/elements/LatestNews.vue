@@ -94,7 +94,7 @@ export default {
                         <img :src="getImageUrl(element.image)" alt="">
                         <div class="sticker">Lorem ipsum</div>
                         <div class="claim">
-                            <span class="infoNews">
+                            <div class="infoNews">
                                 <span class="date">
                                     <font-awesome-icon class="primaryColor" icon="fa-solid fa-clock" />
                                     {{ element.date }}
@@ -103,7 +103,7 @@ export default {
                                     <font-awesome-icon class="primaryColor" icon="fa-solid fa-user" />
                                     {{ element.author }}
                                 </span>
-                            </span>
+                            </div>
                             <h4>{{ element.title }}</h4>
                             <p>{{ element.text }}</p>
 
@@ -201,7 +201,7 @@ export default {
     font-family: $el-font-sans;
     font-weight: 300;
     position: absolute;
-    top: 130px;
+    bottom: 110px;
     right: 20px;
     padding: 0.2rem 0.7rem;
 }
@@ -211,6 +211,7 @@ export default {
     color: $el-text-middle-dark;
     font-size: 0.65rem;
     font-weight: 300;
+    margin-bottom: 0.5rem;
 }
 
 .date {
