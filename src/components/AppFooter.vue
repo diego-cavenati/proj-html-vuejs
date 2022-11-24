@@ -1,6 +1,32 @@
 <script>
 export default {
     name: 'AppFooter',
+    data() {
+        return {
+            links: [
+                {
+                    name: 'About me',
+                    href: '#',
+                },
+                {
+                    name: 'Aboutus',
+                    href: '#',
+                },
+                {
+                    name: 'Language packs',
+                    href: '#',
+                },
+                {
+                    name: 'Become a coach',
+                    href: '#',
+                },
+                {
+                    name: 'Montly events',
+                    href: '#',
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -46,11 +72,7 @@ export default {
                         <hr>
                         <div class="links">
                             <ul>
-                                <li><a href="#">About me</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Language packs</a></li>
-                                <li><a href="#">Become a coach</a></li>
-                                <li><a href="#">Monthly events</a></li>
+                                <li v-for="link in links"><a :href="link.href">{{ link.name }}</a></li>
                             </ul>
                         </div>
                     </div>

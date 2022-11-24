@@ -5,7 +5,7 @@ import JumbotronSection from './elements/JumbotronSection.vue'
 export default {
     name: 'AppHeader',
     components: {
-        NavBar, JumbotronSection
+        NavBar, JumbotronSection,
     },
 }
 </script>
@@ -29,6 +29,6 @@ export default {
 }
 
 .jumbotron {
-    margin-top: -4rem;
+    margin-top: -4.5rem;
 }
 </style>
